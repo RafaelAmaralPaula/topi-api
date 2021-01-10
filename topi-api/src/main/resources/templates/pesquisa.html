@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>Topinformation Pesquisa</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+
+<style>
+body {
+	background-color: black;
+}
+
+p {
+	text-align: center;
+	color: white;
+	font-size: 13px;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 220px;
+	color: white;
+	font-size: 75px;
+}
+</style>
+</head>
+<body>
+
+	<header class="header-pagina">
+		<h1>TopInformation</h1>
+
+		<p>API TopInformation para pesquisar linguagens com mais estrelas
+			no GitHub</p>
+	</header>
+
+	<section>
+		
+		<form method="post"
+			class="form-inline d-flex justify-content-center md-form form-sm mt-0"
+			  style="margin-left:33%; width:25rem;">
+			<i class="fas fa-search" aria-hidden="true"></i> <input name="linguagem"
+				class="form-control form-control-sm ml-3 w-75" type="text"
+				placeholder="Pesquise sua linguagem programação" aria-label="Search" style="text-align: center;">
+		</form>
+
+	</section>
+</body>
+</html>

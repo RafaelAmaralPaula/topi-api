@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<title>Repositórios</title>
+
+<style>
+body {
+	background-color: black;
+}
+</style>
+
+</head>
+
+<body>
+
+	<header>
+		<nav class="navbar navbar-light bg-light">
+			<span class="navbar-brand mb-0 h1" style="font-weight: bold;">TopInformaion
+				API</span> <a href="/topi/pesquisa" class="btn btn-primary" role="button">Pesquisar
+				outra linguagem</a>
+		</nav>
+	</header>
+
+	<div class="card" style="width:40rem; margin-left: 25%; margin-top: 2% ; text-align: center;"
+				th:each="items:${repositorios}">
+		<h5 class="card-header" th:text="${items.name}">Nome</h5>
+		<div class="card-body">
+			<img th:src="${items.owner.avatar_url}" style="border-radius:30px; width: 23; height: 100px;">
+			<h5 class="card-title">Forks</h5>
+			<h5 class="card-title" th:text="${items.forks_count}">Forks</h5>
+			<h5 class="card-title">Stars</h5>
+			<h5 class="card-title" th:text="${items.stargazers_count}">Forks</h5>
+			<a th:href="${items.html_url}" class="btn btn-primary" target="_blank">Visitar Repositório</a>
+		</div>
+	</div>
+</body>
+</html>
